@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles_carusel.css" />
+    <link rel="stylesheet" href="./assets/css/styles_lightbox.css" />
+    <link rel="stylesheet" href="./assets/css/styles_boton_scroll_top.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/javascript_icon.ico"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>JavaScript en Práctica</title>
+  </head>
+  <body>
+    <div id="lightbox">
+      <img
+        id="lightbox-image"
+        src="./assets/img/requisitos_hoja_1.webp"
+        alt="Imagen en lightbox"
+      />
+    </div>
+    <header>
+      <h1 class="header_titulo">
+        <span class="header_titulo_javascript">JavaScript</span> en Práctica
+        <div class="separador"></div>
+      </h1>
+      <p class="header_contenido">
+        Esta página web contiene los tres ejercicios del desafío evaluado número
+        dos del módulo <strong>Fundamentos de JavaScript</strong> de la beca
+        Desarrollo de aplicaciones Full Stack Javascript Trainee de Talento
+        Digital para Chile dictada por Desafío Latam.
+      </p>
+      <div
+        id="carouselExampleIndicators_upper_sm"
+        class="carousel slide d-none d-sm-block"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators_upper_sm"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators_upper_sm"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="contenedor_images">
+              <div class="contenedor_image w-100 w-sm-50">
+                <h2 class="contenedor_image_titulo">Requisitos Hoja 1</h2>
+                <img
+                  src="./assets/img/requisitos_hoja_1.webp"
+                  class="d-block w-100"
+                  alt="Requisitos Hoja 1"
+                />
+                <button
+                  title="Ver Hoja 1"
+                  type="button"
+                  class="carrusel_btn_img_1 btn btn-dark"
+                >
+                  Ver en lightbox
+                </button>
+              </div>
+              <div class="contenedor_image w-100 w-sm-50 d-none d-sm-block">
+                <h2 class="contenedor_image_titulo">Requisitos Hoja 2</h2>
+                <img
+                  src="./assets/img/requisitos_hoja_2.webp"
+                  class="d-block w-100"
+                  alt="Requisitos Hoja 2"
+                />
+                <button
+                  title="Ver Hoja 2"
+                  type="button"
+                  class="carrusel_btn_img_2 btn btn-dark"
+                >
+                  Ver en lightbox
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="contenedor_images">
+              <div class="contenedor_image w-100 w-sm-50">
+                <h2 class="contenedor_image_titulo">Requisitos Hoja 3</h2>
+                <img
+                  src="./assets/img/requisitos_hoja_3.webp"
+                  class="d-block w-100"
+                  alt="Requisitos Hoja 3"
+                />
+
+                <button
+                  title="Ver Hoja 3"
+                  type="button"
+                  class="carrusel_btn_img_3 btn btn-dark"
+                >
+                  Ver en lightbox
+                </button>
+              </div>
+
+              <div class="contenedor_image w-100 w-sm-50 d-none d-sm-block">
+                <h2 class="contenedor_image_titulo">Requisitos Hoja 1</h2>
+                <img
+                  src="./assets/img/requisitos_hoja_1.webp"
+                  class="d-block w-100"
+                  alt="Requisitos Hoja 1"
+                />
+                <button
+                  title="Ver Hoja 1"
+                  type="button"
+                  class="carrusel_btn_img_1 btn btn-dark"
+                >
+                  Ver en lightbox
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators_upper_sm"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators_upper_sm"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div
+        id="carouselExampleIndicators_lower_sm"
+        class="carousel slide d-block d-sm-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators_lower_sm"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators_lower_sm"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators_lower_sm"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="contenedor_images">
+              <div class="contenedor_image w-100">
+                <h2 class="contenedor_image_titulo">Requisitos Hoja 1</h2>
+                <img
+                  src="./assets/img/requisitos_hoja_1.webp"
+                  class="d-block w-100"
+                  alt="Requisitos Hoja 1"
+                />
+                <button
+                  title="Ver Hoja 1"
+                  type="button"
+                  class="carrusel_btn_img_1 btn btn-dark"
+                >
+                  Ver en lightbox
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="contenedor_images">
+              <div class="contenedor_image w-100 w-sm-50">
+                <h2 class="contenedor_image_titulo">Requisitos Hoja 2</h2>
+                <img
+                  src="./assets/img/requisitos_hoja_2.webp"
+                  class="d-block w-100"
+                  alt="Requisitos Hoja 2"
+                />
+                <button
+                  title="Ver Hoja 2"
+                  type="button"
+                  class="carrusel_btn_img_2 btn btn-dark"
+                >
+                  Ver en lightbox
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="contenedor_images">
+              <div class="contenedor_image w-100 w-sm-50">
+                <h2 class="contenedor_image_titulo">Requisitos Hoja 3</h2>
+                <img
+                  src="./assets/img/requisitos_hoja_3.webp"
+                  class="d-block w-100"
+                  alt="Requisitos Hoja 3"
+                />
+
+                <button
+                  title="Ver Hoja 3"
+                  type="button"
+                  class="carrusel_btn_img_3 btn btn-dark"
+                >
+                  Ver en lightbox
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators_lower_sm"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators_lower_sm"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+    <section class="ejercicio_uno">
+      <h2 class="ejercicio_uno_titulo">
+        Ejercicio Uno
+        <div class="separador"></div>
+      </h2>
+      <div class="ejercicio_uno_contenido">
+        <h2>Escríbenos !!!</h2>
+        <div
+          class="ejercicio_uno_resultado"
+          style="color: green; font-style: italic"
+        >
+          Mensaje Enviado con éxito!!!
+        </div>
+        <form id="ejercicio_uno_formulario" novalidate>
+          <div>
+            <div
+              class="form_section"
+              style="display: flex; flex-direction: column"
+            >
+              <label for="ejercicio_uno_nombre" class="form-label">
+                Nombre completo
+              </label>
+              <input
+                id="ejercicio_uno_nombre"
+                type="text"
+                class="form-control border border-primary"
+                placeholder="Ingresa tu nombre aquí"
+                required
+              />
+              <p class="ejercicio_uno_errorNombre error_contenedor">
+                El campo
+                <span style="text-decoration: underline">Nombre</span> no debe
+                estar vacio y solo debe tener letras.
+              </p>
+            </div>
+            <div
+              class="form_section"
+              style="display: flex; flex-direction: column"
+            >
+              <label for="ejercicio_uno_asunto" class="form-label">
+                Asunto
+              </label>
+              <input
+                id="ejercicio_uno_asunto"
+                type="text"
+                placeholder="Ingresa el asunto aquí"
+                class="form-control border border-primary"
+                required
+              />
+              <p
+                class="ejercicio_uno_errorAsunto error_contenedor"
+                style="color: red; font-style: italic"
+              >
+                El campo
+                <span style="text-decoration: underline">Asunto</span> no debe
+                estar vacio y solo debe tener letras.
+              </p>
+            </div>
+          </div>
+          <div
+            class="form_section"
+            style="display: flex; flex-direction: column"
+          >
+            <label for="ejercicio_uno_mensaje" class="form-label">
+              Mensaje
+            </label>
+            <textarea
+              id="ejercicio_uno_mensaje"
+              rows="3"
+              class="form-control border border-primary"
+              required
+              placeholder="Ingresa el mensaje aquí"
+            ></textarea>
+            <p
+              class="ejercicio_uno_errorMensaje error_contenedor"
+              style="color: red; font-style: italic"
+            >
+              El campo
+              <span style="text-decoration: underline">Mensaje</span> no debe
+              estar vacio y solo debe tener letras.
+            </p>
+          </div>
+          <div class="form_section">
+            <button
+              class="btn btn-primary"
+              id="ejercicio_uno_botton"
+              type="submit"
+              title="Haz click aquí para enviar el mensaje"
+            >
+              Envíar mensaje
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="ejercicio_dos">
+      <h2 class="ejercicio_dos_titulo">
+        Ejercicio Dos
+        <div class="separador"></div>
+      </h2>
+      <div class="contenedor_paleta_colores">
+        <h2 class="contenedor_paleta_colores_titulo">Paleta de colores</h2>
+        <p class="contenedor_paleta_colores_descripcion">
+          Selecciona un color para rellenar la caja del lado derecho
+        </p>
+        <div style="display: flex">
+          <div style="display: flex; flex-direction: column">
+            <button
+              id="ejercicio_dos_btn-1"
+              class="ejercicio_dos_btn_color"
+              style="background-color: #e53e3e; width: 50px; height: 50px"
+              type="button"
+              title="Selecciona color Rojo"
+            ></button>
+            <button
+              id="ejercicio_dos_btn-2"
+              class="ejercicio_dos_btn_color"
+              style="background-color: #dd6b20; width: 50px; height: 50px"
+              type="button"
+              title="Selecciona Color Naranjo"
+            ></button>
+            <button
+              id="ejercicio_dos_btn-3"
+              class="ejercicio_dos_btn_color"
+              style="background-color: #faf089; width: 50px; height: 50px"
+              type="button"
+              title="Selecciona Color Amarillo"
+            ></button>
+            <button
+              id="ejercicio_dos_btn-4"
+              class="ejercicio_dos_btn_color"
+              style="background-color: #48bb78; width: 50px; height: 50px"
+              type="button"
+              title="Selecciona Color Verde"
+            ></button>
+            <button
+              id="ejercicio_dos_btn-5"
+              class="ejercicio_dos_btn_color"
+              style="background-color: #81e6d9; width: 50px; height: 50px"
+              type="button"
+              title="Selecciona Color Verde Agua"
+            ></button>
+            <button
+              id="ejercicio_dos_btn-6"
+              class="ejercicio_dos_btn_color"
+              style="background-color: #d53f8c; width: 50px; height: 50px"
+              type="button"
+              title="Selecciona Color Pink"
+            ></button>
+          </div>
+          <div style="max-width: 500px; height: 300px; width: 80%">
+            <div
+              id="caja"
+              style="
+                border: 1px solid black;
+                border-left: 0;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <span class="contenido_caja_color"
+                >Selecciona un color del lado izquierdo y acá se mostrará</span
+              >
+              <div
+                class="resetear_color"
+                title="Haz click aquí para resetear al color blanco"
+              >
+                Resetear Color
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ejercicio_tres">
+      <h2 class="ejercicio_tres_titulo">
+        Ejercicio Tres
+        <div class="separador"></div>
+      </h2>
+      <div class="ejercicio_tres_contenedor_calculadora">
+        <h2>Resultado: <span class="resultado">-</span></h2>
+        <div class="ejercicio_tres_contenedor_input">
+          <div>
+            <div class="input-group">
+              <span
+                class="input-group-text bg-primary text-white"
+                id="ejercicio_tres_valor_1_label"
+                >Valor 1:</span
+              >
+              <input
+                id="ejercicio_tres_valor_1"
+                type="text"
+                class="form-control"
+                placeholder="Ingresa Valor 1"
+                aria-label="Valor 1"
+                aria-describedby="ejercicio_tres_valor_1_label"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="input-group">
+              <span
+                class="input-group-text bg-primary text-white"
+                id="ejercicio_tres_valor_2_label"
+                >Valor 2:</span
+              >
+              <input
+                id="ejercicio_tres_valor_2"
+                type="text"
+                class="form-control"
+                placeholder="Ingresa Valor 2"
+                aria-label="Valor 2"
+                aria-describedby="ejercicio_tres_valor_2_label"
+              />
+            </div>
+          </div>
+          <div class="ejercicio_tres_contenedor_input_botones">
+            <button
+              id="ejercicio_tres_btn-sumar"
+              type="button"
+              class="btn btn-success"
+            >
+              SUMAR <i class="fa-solid fa-circle-plus"></i>
+            </button>
+            <button
+              id="ejercicio_tres_btn-restar"
+              type="button"
+              class="btn btn-dark"
+            >
+              RESTAR <i class="fa-solid fa-circle-minus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="contenedor_logo">
+        <a href="./index.html"
+          ><img src="./assets/img/logo_waldo.png" alt="logo waldo"
+        /></a>
+      </div>
+      <div class="contenedor_contenido">
+        <p class="contenedor_contenido_texto">
+          Página web desarrollado en un 100% por
+          <span class="contenedor_contenido_texto--destaque"
+            ><a
+              href="https://linktr.ee/waldohidalgo"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Ir a mi linktr.ee"
+              >Waldo Hidalgo Oyarce</a
+            ></span
+          >
+        </p>
+        <div class="contenedor_contenido_redes">
+          <a
+            href="https://github.com/waldohidalgo"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="./assets/img/github.png"
+              alt="logo github"
+              title="Ir a mi perfil de Github"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/waldo-hidalgo-oyarce/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="./assets/img/linkedin.png"
+              alt="logo linkedin"
+              tille="Ir a mi perfil de LinkedIn"
+          /></a>
+        </div>
+      </div>
+      <button id="scrollBtn" title="Ir a Inicio">
+        <i class="fa fa-chevron-circle-up"></i>
+      </button>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d1b9dc6536.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script_ejercicio_uno.js"></script>
+    <script src="./assets/js/script_ejercicio_dos.js"></script>
+    <script src="./assets/js/script_ejercicio_tres.js"></script>
+    <script src="./assets/js/script_control_lightbox.js"></script>
+    <script src="./assets/js/script_scroll_btn.js"></script>
+  </body>
+</html>
